@@ -266,7 +266,7 @@
 	width: 100%;
 	height: 40px;
 	cursor: pointer;
-	background-color: #179500;
+	/*background-color: #179500;*/
 }
 .nav_box .nav .sec_nav .top i{
 	float: left;
