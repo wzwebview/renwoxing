@@ -1,3 +1,4 @@
+//
 function SelectPullDown(box){
 	this.selectBox = document.getElementById(box);
 	this.selectIpt = document.getElementById(box).getElementsByTagName("input")[0];
@@ -39,7 +40,6 @@ SelectPullDown.prototype ={
 				self.selectDivBtn.innerHTML ="<span>" + trimStr(this.innerHTML) + "</span><i></i>";
 				self.selectIpt.value= this_;
 				self.selectListHide();
-				//chang事件触发
 				if (self.selectIpt.fireEvent) self.selectIpt.fireEvent('onchange');
 				else{ 
 					var evt;
@@ -58,3 +58,34 @@ SelectPullDown.prototype ={
 
 var year = new SelectPullDown('typeselect');
 year.init();
+
+//
+window.onscroll=function(){
+    var top=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop;
+    var node0 = document.getElementById('topadvertise'),
+    	node1 = document.getElementById('topbar'),
+    	node2 = document.getElementById('header'),
+    	node3 = document.getElementById('firstnav');
+    if(node0){
+    	if(top>100){
+	        node1 && node1.setAttribute("class","topbar_box m1230 topbarfix");
+	        node2 && node2.setAttribute("class","search_box m1230 searchfix");
+	        node3 && node3.setAttribute("class","nav_box m1230 navmt");
+	    }else{
+	        node1 && node1.setAttribute("class","topbar_box m1230");
+	        node2 && node2.setAttribute("class","search_box m1230");
+	        node3 && node3.setAttribute("class","nav_box m1230");
+	    }
+    }else{
+    	if(top>0){
+	        node1 && node1.setAttribute("class","topbar_box m1230 topbarfix");
+	        node2 && node2.setAttribute("class","search_box m1230 searchfix");
+	        node3 && node3.setAttribute("class","nav_box m1230 navmt");
+	    }else{
+	        node1 && node1.setAttribute("class","topbar_box m1230");
+	        node2 && node2.setAttribute("class","search_box m1230");
+	        node3 && node3.setAttribute("class","nav_box m1230");
+	    }
+    }
+    
+}

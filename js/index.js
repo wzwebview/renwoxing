@@ -1,8 +1,7 @@
-// $('#myCarousel').carousel('cycle')
-// $('.carousel').carousel({
-//     interval: 2000
-// })
-
+$('#myCarousel').carousel('cycle')
+$('.carousel').carousel({
+    interval: 2000
+})
 function indexTab(sel,cnt){
 	var ulsel = document.getElementById(sel),
 		ulcnt = document.getElementById(cnt),
